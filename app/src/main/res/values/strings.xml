@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Yelp Search</string>
+
+    <string name="search">Search Businesses</string>
+</resources>
