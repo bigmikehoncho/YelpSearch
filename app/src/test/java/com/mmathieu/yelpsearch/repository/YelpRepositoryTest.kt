@@ -2,6 +2,7 @@ package com.mmathieu.yelpsearch.repository
 
 import com.mmathieu.yelpsearch.TestSchedulerRule
 import com.mmathieu.yelpsearch.api.YelpService
+import com.mmathieu.yelpsearch.common.Lce
 import com.mmathieu.yelpsearch.model.*
 import io.mockk.every
 import io.mockk.mockk
@@ -54,7 +55,7 @@ class YelpRepositoryTest {
             it == Lce.Content(
                 BusinessData(
                     businesses = businesses,
-                    reviews = businesses
+                    reviewsByBusinessId = businesses
                         .map { business -> business.id to emptyList<Review>() }
                         .toMap()
                 )

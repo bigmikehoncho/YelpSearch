@@ -3,7 +3,7 @@ package com.mmathieu.yelpsearch.view.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mmathieu.yelpsearch.model.BusinessCellData
-import com.mmathieu.yelpsearch.model.Lce
+import com.mmathieu.yelpsearch.common.Lce
 import com.mmathieu.yelpsearch.repository.BusinessData
 import com.mmathieu.yelpsearch.repository.YelpRepository
 import io.reactivex.disposables.CompositeDisposable
@@ -84,7 +84,7 @@ class MainViewModel @Inject constructor(private val yelpRepository: YelpReposito
             id = business.id,
             name = business.name,
             imageUrl = business.image_url,
-            review = reviews[business.id]?.firstOrNull()?.text ?: ""
+            review = reviewsByBusinessId[business.id]?.firstOrNull()?.text ?: ""
         )
     }
 

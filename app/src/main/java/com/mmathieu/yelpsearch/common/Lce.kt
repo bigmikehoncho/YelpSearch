@@ -1,4 +1,4 @@
-package com.mmathieu.yelpsearch.model
+package com.mmathieu.yelpsearch.common
 
 sealed class Lce<T> {
     class Loading<T> : Lce<T>()

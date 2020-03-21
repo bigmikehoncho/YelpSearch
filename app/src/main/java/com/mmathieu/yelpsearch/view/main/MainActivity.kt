@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.businesses.observe(this, Observer {
             adapter.submitList(it)
         })
-        adapter.itemCount
 
         mainViewModel.isLoading.observe(this, Observer {
             progress_bar.visibility = if (it) View.VISIBLE else View.GONE

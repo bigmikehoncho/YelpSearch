@@ -2,7 +2,7 @@ package com.mmathieu.yelpsearch.view.main
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.mmathieu.yelpsearch.TestSchedulerRule
-import com.mmathieu.yelpsearch.model.Lce
+import com.mmathieu.yelpsearch.common.Lce
 import com.mmathieu.yelpsearch.repository.BusinessData
 import com.mmathieu.yelpsearch.repository.YelpRepository
 import io.mockk.every

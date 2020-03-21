@@ -2,7 +2,7 @@ package com.mmathieu.yelpsearch.repository
 
 import com.mmathieu.yelpsearch.api.YelpService
 import com.mmathieu.yelpsearch.model.Business
-import com.mmathieu.yelpsearch.model.Lce
+import com.mmathieu.yelpsearch.common.Lce
 import com.mmathieu.yelpsearch.model.Review
 import io.reactivex.Observable
 import io.reactivex.Single
@@ -10,7 +10,7 @@ import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.Executors
 import javax.inject.Inject
 
-data class BusinessData(val businesses: List<Business>, val reviews: Map<String, List<Review>>)
+data class BusinessData(val businesses: List<Business>, val reviewsByBusinessId: Map<String, List<Review>>)
 
 class YelpRepository @Inject constructor(private val yelpService: YelpService) {
 
